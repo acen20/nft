@@ -7,6 +7,7 @@
   --avenir-bold: avenir-bold;
   --avenir-lt-bold: avenir-lt-bold;
   --color-red: rgb(232, 74, 67);
+  --color-black: rgb(47, 46, 46);
   --bg-color: rgb(242, 242, 242);
   --color-gray: rgb(95, 104, 131);
   --font-big: 1.125em;
@@ -14,9 +15,11 @@
   --font-lg: 1.7em;
   --font-small: 1.1em;
   --font-regular: 1em;
+  --font-xxl: 4.6em;
   --font-spacing-lg: 0.25em;
   --gap-large: 9em;
   --gap-small: 5em;
+  --gap-xs: 4em;
   --padding-large: 2.3em;
   --line-height-small: 1.5em;
   --line-height-large: 1.85em;
@@ -130,6 +133,39 @@ nav {
   font-size: var(--font-lg) !important;
 }
 
+.stats-container {
+  font-size: var(--font-regular) !important;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  align-items: flex-start;
+  gap: var(--gap-xs);
+}
+
+.stat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.stats-1 {
+  color: var(--color-black);
+  font-size: var(--font-xxl);
+  font-weight: bolder;
+  min-width: 100%;
+}
+
+.stats-desc {
+  font-weight: normal;
+  font-size: calc(var(--font-small) + 2px);
+  padding: 0;
+  margin: 0;
+  width: 80%;
+}
+
 @keyframes opacity-control {
   0% {
     opacity: 0;
@@ -143,6 +179,7 @@ nav {
   :root {
     --font-xl: 1em;
     --font-big: 0.75em;
+    --font-xxl: 3.5em;
   }
   .hamburger {
     opacity: 1;
@@ -164,7 +201,15 @@ nav {
     position: static;
   }
   .header-subheading {
-    font-size: calc(var(--font-xl));
+    font-size: calc(var(--font-xl) + 2px);
+  }
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-container {
+    gap: 0em;
   }
 }
 
