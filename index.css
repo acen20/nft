@@ -252,13 +252,18 @@ nav {
   font-family: var(--avenir-regular);
 }
 
+.project-img-wrapper {
+  overflow: hidden;
+}
+
 .project-image {
   width: 100%;
   object-fit: cover;
   height: 400px;
-  -webkit-filter: grayscale(1);
+  -webkit-filter: grayscale(1) brightness(150%);
   cursor: pointer;
-  transition: all 0.5s ease-out;
+  transition: -webkit-filter 0.5s;
+  transform: scale(2) translateY(40px);
 }
 
 .project-image:hover {
