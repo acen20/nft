@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --avenir-normal: avenir-normal;
+  --color-red: rgb(232, 74, 67);
+  --bg-color: rgb(242, 242, 242);
+  --font-big: 1.125em;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19vw 3.3em;
+  font-family: var(--avenir-normal);
+  color: var(--color-red);
+  font-size: var(--font-big);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.hamburger div {
+  width: 1.6em;
+  height: 3px;
+  background: gray;
+}
+
+@media screen and (max-width: 800px) {
+  .hamburger {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: avenir-normal;
+  src: url(fonts/AvenirLTStd-Roman.otf);
+}
