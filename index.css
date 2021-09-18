@@ -8,9 +8,10 @@
   --avenir-lt-bold: avenir-lt-bold;
   --color-red: rgb(232, 74, 67);
   --color-black: rgb(47, 46, 46);
+  --color-lightgray: rgb(130, 129, 129);
   --bg-color: rgb(242, 242, 242);
   --color-gray: rgb(95, 104, 131);
-  --font-big: 1.125em;
+  --font-big: 2.725em;
   --font-xl: 2em;
   --font-lg: 1.7em;
   --font-small: 1.1em;
@@ -33,6 +34,8 @@ body {
 .body {
   display: grid;
   grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
   gap: var(--gap-large);
 }
 
@@ -50,7 +53,17 @@ nav {
   font-size: var(--font-regular);
   position: fixed;
   width: 100%;
+  z-index: 1;
   top: 0;
+}
+
+.site-logo {
+  cursor: pointer;
+}
+
+.site-logo:hover {
+  color: var(--color-gray);
+  transition: all 0.6s ease-out;
 }
 
 .hamburger {
@@ -159,11 +172,97 @@ nav {
 }
 
 .stats-desc {
-  font-weight: normal;
+  font-weight: 300;
   font-size: calc(var(--font-small) + 2px);
   padding: 0;
   margin: 0;
   width: 80%;
+  color: var(--color-lightgray);
+}
+
+.projects-section {
+  display: flex;
+  gap: calc(var(--gap-small) + 0.5em);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.big-heading {
+  text-align: center;
+  font-size: var(--font-big);
+  letter-spacing: var(--font-spacing-lg);
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color-gray);
+  font-family: var(--avenir-regular);
+}
+
+.dots {
+  font-size: var(--font-lg);
+  transform-origin: center;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 7em;
+}
+
+.projects-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.project {
+  display: flex;
+  flex-basis: 30%;
+  position: relative;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.project > div:nth-child(1) {
+  width: 90%;
+  align-self: center;
+}
+
+.project-title {
+  width: 10%;
+  text-transform: uppercase;
+  font-size: calc(var(--font-lg) - 6px);
+  letter-spacing: var(--font-spacing-lg);
+}
+
+.project-hr {
+  height: 5px;
+  background: gray;
+  border: none;
+  margin-top: 20px;
+}
+
+.project-img-container {
+  position: relative;
+}
+
+.project-number {
+  position: absolute;
+  top: -35px;
+  right: 12px;
+  font-size: calc(var(--font-xxl) - 0.8em);
+  font-family: var(--avenir-regular);
+}
+
+.project-image {
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+  filter: grayscale();
+  transition: filter 0.3s ease-out;
+  cursor: pointer;
+}
+
+.project-image:hover {
+  filter: grayscale(0%);
 }
 
 @keyframes opacity-control {
@@ -178,7 +277,7 @@ nav {
 @media screen and (max-width: 800px) {
   :root {
     --font-xl: 1em;
-    --font-big: 0.75em;
+    --font-big: 1.75em;
     --font-xxl: 3.5em;
   }
   .hamburger {
