@@ -256,13 +256,13 @@ nav {
   width: 100%;
   object-fit: cover;
   height: 400px;
-  filter: grayscale();
-  transition: filter 0.3s ease-out;
+  -webkit-filter: grayscale(1);
   cursor: pointer;
+  transition: all 0.5s ease-out;
 }
 
 .project-image:hover {
-  filter: grayscale(0%);
+  -webkit-filter: none;
 }
 
 @keyframes opacity-control {
