@@ -4,23 +4,35 @@
 
 :root {
   --avenir-normal: avenir-normal;
+  --avenir-bold: avenir-bold;
   --color-red: rgb(232, 74, 67);
   --bg-color: rgb(242, 242, 242);
   --font-big: 1.125em;
+  --font-xl: 2em;
+  --font-spacing-expand: 0.25em;
 }
 
 body {
   background: var(--bg-color);
+  font-family: var(--avenir-normal);
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 19vw 3.3em;
+  padding: 4.5em 3.3em;
   font-family: var(--avenir-normal);
   color: var(--color-red);
   font-size: var(--font-big);
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .hamburger {
@@ -37,14 +49,83 @@ nav {
   background: gray;
 }
 
+.header {
+  display: grid;
+  place-items: center;
+  font-size: var(--font-xl);
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  margin-top: 15%;
+  padding: 0;
+}
+
+.header-heading {
+  letter-spacing: var(--font-spacing-expand);
+  color: var(--color-red);
+  font-family: var(--avenir-normal);
+}
+
+.header-subheading {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 0.66em;
+}
+
+.circle {
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  border: 3px solid rgb(95, 104, 131);
+  position: absolute;
+  animation: opacity-control;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes opacity-control {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 800px) {
+  :root {
+    --font-xl: 1em;
+  }
   .hamburger {
     opacity: 1;
+  }
+  .circle {
+    display: none;
+  }
+  .header {
+    height: auto;
+    margin-top: 40%;
+  }
+  nav {
+    padding: 1.5em 2em;
+    width: auto;
+    position: static;
+  }
+  .header-subheading {
+    font-size: calc(var(--font-xl));
   }
 }
 
 @font-face {
   font-family: avenir-normal;
-  src: url(fonts/AvenirLTStd-Roman.otf);
+  src: url("fonts/New folder (10)/AvenirNextLTPro-Regular.otf");
   font-weight: 500;
+}
+
+@font-face {
+  font-family: avenir-bold;
+  src: url("fonts/New folder (10)/AvenirNextLTPro-Bold.otf");
+  font-weight: 800;
 }
