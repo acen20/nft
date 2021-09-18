@@ -9,7 +9,12 @@
   --bg-color: rgb(242, 242, 242);
   --font-big: 1.125em;
   --font-xl: 2em;
-  --font-spacing-expand: 0.25em;
+  --font-regular: 1.125;
+  --font-spacing-lg: 0.25em;
+  --gap-large: 4em;
+  --gap-small: 2em;
+  --padding-large: 2.5em;
+  --line-height-large: 1.5em;
 }
 
 body {
@@ -20,6 +25,11 @@ body {
 .body {
   display: grid;
   grid-template-columns: 1fr;
+  gap: var(--gap-large);
+}
+
+.text-red {
+  color: var(--color-red);
 }
 
 nav {
@@ -29,7 +39,7 @@ nav {
   padding: 4.5em 3.3em;
   font-family: var(--avenir-normal);
   color: var(--color-red);
-  font-size: var(--font-big);
+  font-size: var(--font-regular);
   position: fixed;
   width: 100%;
   top: 0;
@@ -58,10 +68,11 @@ nav {
   position: relative;
   margin-top: 15%;
   padding: 0;
+  background-color: beige;
 }
 
 .header-heading {
-  letter-spacing: var(--font-spacing-expand);
+  letter-spacing: var(--font-spacing-lg);
   color: var(--color-red);
   font-family: var(--avenir-normal);
 }
@@ -85,6 +96,23 @@ nav {
   animation-fill-mode: forwards;
 }
 
+.main {
+  background: lightgreen;
+  padding: var(--padding-large);
+  font-size: var(--font-big);
+  display: grid;
+  gap: var(--gap-small);
+  text-align: center;
+}
+
+.main-phrase {
+  letter-spacing: var(--font-spacing-lg);
+  line-height: var(--line-height-large);
+}
+
+.main-text2 {
+}
+
 @keyframes opacity-control {
   0% {
     opacity: 0;
@@ -97,6 +125,7 @@ nav {
 @media screen and (max-width: 800px) {
   :root {
     --font-xl: 1em;
+    --font-big: 0.75em;
   }
   .hamburger {
     opacity: 1;
