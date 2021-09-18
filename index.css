@@ -46,4 +46,5 @@ nav {
 @font-face {
   font-family: avenir-normal;
   src: url(fonts/AvenirLTStd-Roman.otf);
+  font-weight: 500;
 }
