@@ -309,7 +309,7 @@ nav {
 }
 
 .project:nth-child(3) .project-image {
-  filter: brightness(100%) grayscale();
+  dfilter: brightness(100%) grayscale();
 }
 
 .services {
