@@ -257,6 +257,7 @@ nav {
 
 .project-title {
   width: 10%;
+  line-height: var(--line-height-small);
   text-transform: uppercase;
   font-size: calc(var(--font-lg) - 6px);
   letter-spacing: var(--font-spacing-lg);
@@ -294,10 +295,6 @@ nav {
   transition: -webkit-filter 0.5s linear;
   background: red;
   transform: scale(1.2);
-  display: block;
-  margin: auto;
-  text-align: center;
-  transform-origin: center;
 }
 
 .project-image:hover,
@@ -307,7 +304,7 @@ nav {
 }
 
 .project:nth-child(2) .project-image {
-  filter: brightness(350%) grayscale();
+  filter: contrast(90%) brightness(200%) grayscale();
   transform: scale(1);
 }
 
