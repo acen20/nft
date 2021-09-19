@@ -462,12 +462,16 @@ nav {
 
   .service > h2 {
     margin-top: -40px !important;
-    font-size: calc(var(--font-lg));
+    font-size: calc(var(--font-lg) - 0.2125em);
   }
 
   .service h5 {
     margin-top: calc(var(--gap-xs) - 3.5em);
     font-size: calc(var(--font-small) + 0.1em);
+  }
+
+  .project:nth-child(3) .project-image {
+    margin-left: 100px;
   }
 }
 
