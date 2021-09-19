@@ -222,7 +222,6 @@ nav {
 
 .project {
   display: flex;
-  flex-grow: 1;
   flex-basis: 33%;
   position: relative;
   flex-direction: column;
