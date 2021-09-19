@@ -42,6 +42,10 @@ body {
   gap: var(--gap-large);
 }
 
+.nav-list {
+  list-style-type: none;
+}
+
 .text-red {
   color: var(--color-red);
 }
@@ -222,7 +226,6 @@ nav {
 
 .project {
   display: flex;
-  flex-basis: 33%;
   position: relative;
   flex-direction: column;
   gap: 3em;
@@ -337,7 +340,7 @@ nav {
 .service h5 {
   color: var(--color-black);
   font-size: calc(var(--font-small) - 0.1em);
-  font-weight: 800;
+  font-weight: 500;
   opacity: 0.9;
   margin-top: calc(var(--gap-xs) - 2.5em);
   line-height: var(--line-height-small);
