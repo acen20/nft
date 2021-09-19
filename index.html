@@ -41,7 +41,7 @@
         </div>
         <div class="circle"></div>
       </header>
-      <main id="main" class="main">
+      <main id="about" class="main">
         <h2 class="main-phrase">
           <span class="text-red">YOU CREATE, </span>WE MANAGE YOUR COLLECTION ON
           THE BLOCKCHAIN
@@ -68,7 +68,7 @@
           </div>
         </div>
       </main>
-      <div class="projects-section">
+      <div id="projects" class="projects-section">
         <h2 class="big-heading">LATEST<br />NFT SALES</h2>
         <h2 class="text-red dots">......................</h2>
         <div class="projects-container">
@@ -125,7 +125,7 @@
           </div>
         </div>
         <h2 class="big-heading">SERVICES</h2>
-        <div class="services">
+        <div id="services" class="services">
           <div class="service">
             <div class="svg-container">
               <svg id="camera-svg" class="svg-icon" style="">
@@ -271,7 +271,7 @@
           </div>
         </div>
       </div>
-      <div class="team">
+      <div id="team" class="team">
         <h2 class="big-heading">THE TEAM</h2>
         <div class="team-container">
           <div class="team-img"></div>
@@ -284,14 +284,15 @@
           </p>
         </div>
       </div>
-      <div class="contact">
+      <div id="contact" class="contact">
         <h2 class="big-heading">CONTACT</h2>
-        <div class="contact-form">
-          <input placeholder="Name" type="text" name="" value="" />
-          <input placeholder="Email" type="text" name="" value="" />
+        <form action="javascript:form-ex()" class="contact-form">
+          <input placeholder="Name" type="name" name="" value="" />
+          <input placeholder="Email" type="email" name="" value="" />
           <input placeholder="Subject" type="text" name="" value="" />
-          <input placeholder="Message" type="text" name="" value="" />
-        </div>
+          <textarea placeholder="Message" name="Message"></textarea>
+          <button id="submit-btn" type="submit">submit</button>
+        </form>
       </div>
     </div>
   </body>

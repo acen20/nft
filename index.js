@@ -6,3 +6,12 @@ hamburger.addEventListener("click", function () {
   body.classList.toggle("disablePointer");
   navlinks.classList.toggle("display");
 });
+
+var elem = document.querySelectorAll("input,textarea");
+
+for (var i = 0; i < elem.length; i++) {
+  elem[i].addEventListener("click", function (e) {
+    var element = e.target;
+    element.style.background = "var(--color-red)";
+  });
+}

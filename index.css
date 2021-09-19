@@ -510,11 +510,11 @@ nav {
   grid-area: form-subject;
 }
 
-.contact-form > input:nth-child(4) {
+.contact-form > textarea {
   grid-area: form-message;
-  height: 100px;
 }
-input {
+input,
+textarea {
   border: none;
   border-bottom: 1px solid var(--color-black);
   background: transparent;
@@ -522,10 +522,23 @@ input {
   font-size: var(--font-sm);
   font-weight: 100;
   padding: 10px;
+  font-family: inherit;
+  resize: none;
 }
 
-input:hover {
+input:hover,
+textarea:hover {
   border-bottom-width: 4px;
+}
+
+#submit-btn {
+  margin: 0 auto;
+  background: var(--color-red);
+  color: white;
+  text-transform: capitalize;
+  font-size: var(--font-regular);
+  border: none;
+  padding: 5px 8px;
 }
 
 @keyframes opacity-control {
