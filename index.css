@@ -470,9 +470,7 @@ nav {
     font-size: calc(var(--font-small) + 0.1em);
   }
 
-  .project:nth-child(3) {
-    text-align: center;
-    display: block;
+  .project:nth-child(3) .project-image {
   }
 }
 
