@@ -407,6 +407,8 @@ nav {
 
 .project:nth-child(3) .project-image {
   filter: brightness(100%) grayscale();
+  transform: scale(1.2);
+  transform-origin: center;
 }
 
 .services {
@@ -716,7 +718,7 @@ footer > .footer-container > div {
     font-size: calc(var(--font-small) + 0.1em);
   }
   .project:nth-child(3) {
-    margin-top: 0px;
+    margin-top: calc(var(--translateY) + 200px);
   }
   .contact-form {
     grid-template-areas:
