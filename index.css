@@ -9,6 +9,7 @@
   --color-red: rgb(232, 74, 67);
   --color-black: rgb(47, 46, 46);
   --color-subheading: rgb(20, 26, 45);
+  --color-pink: rgb(240, 158, 154);
   --color-blue: midnightblue;
   --color-lightgray: rgb(130, 129, 129);
   --bg-color: rgb(242, 242, 242);
@@ -20,6 +21,7 @@
   --font-regular: 1em;
   --font-xxl: 4.6em;
   --font-spacing-lg: 0.25em;
+  --font-spacing-sm: 0.2em;
   --gap-large: 9em;
   --gap-small: 5em;
   --gap-xs: 4em;
@@ -42,8 +44,55 @@ body {
   gap: var(--gap-large);
 }
 
+body.disablePointer {
+  overflow: hidden;
+}
+
+.nav-links {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--color-gray);
+  color: var(--color-pink);
+  font-family: var(--avenir-regular);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: var(--font-spacing-sm);
+  font-size: var(--font-lg);
+  position: relative;
+  z-index: 2;
+  position: fixed;
+  transition: opacity 0.3s;
+  width: 100%;
+}
+
 .nav-list {
-  list-style-type: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
+
+.nav-cross {
+  color: var(--color-pink);
+  position: absolute;
+  font-size: 2em !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-list > li {
+  padding: 1em;
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-pink);
+}
+
+.nav-list li:last-child {
+  border-bottom: 0px;
 }
 
 .text-red {
@@ -79,6 +128,8 @@ nav {
   gap: 0.4em;
   cursor: pointer;
   opacity: 0;
+  z-index: 4;
+  position: relative;
 }
 
 .hamburger div {
@@ -472,8 +523,8 @@ nav {
     font-size: calc(var(--font-small) + 0.1em);
   }
 
-  .project:nth-child(3) > * > * > img {
-    box-sizing: border-box;
+  .project:nth-child(3) {
+    flex: 1;
   }
 }
 
