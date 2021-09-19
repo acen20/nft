@@ -4,6 +4,9 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --avenir-normal: avenir-normal;
   --avenir-bold: avenir-bold;
@@ -72,15 +75,15 @@ body {
   position: relative;
   z-index: 2;
   position: fixed;
-  transition: opacity 0.5s;
   width: 100%;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.5s;
 }
 
 .display {
   opacity: 1;
-  pointer-events: none;
+  pointer-events: all;
 }
 
 .nav-list {
@@ -109,6 +112,11 @@ body {
   padding: 0.5em 1em;
   cursor: pointer;
   border-bottom: 1px solid var(--color-pink);
+}
+
+li a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-list li:last-child {
@@ -572,7 +580,7 @@ footer {
   margin-top: 3em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 2em;
   padding: 4em;
