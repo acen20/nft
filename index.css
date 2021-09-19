@@ -309,7 +309,7 @@ nav {
 }
 
 .project:nth-child(3) .project-image {
-  dfilter: brightness(100%) grayscale();
+  filter: brightness(100%) grayscale();
 }
 
 .services {
@@ -470,7 +470,7 @@ nav {
     font-size: calc(var(--font-small) + 0.1em);
   }
 
-  .project:nth-child(3) .project-image {
+  .project:nth-child(3) {
     text-align: center;
     display: block;
   }
