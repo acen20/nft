@@ -420,7 +420,7 @@ nav {
   }
   .projects-container {
     flex-direction: column;
-    gap: 6em;
+    gap: 4em;
   }
   .project {
   }
@@ -453,21 +453,23 @@ nav {
   .services {
     flex-direction: column;
     gap: 0em;
+    margin-top: -140px;
   }
 
   .projects-section {
     width: 90%;
   }
   .svg-icon {
-    transform: scale(0.7);
+    transform: scale(0.7) !important;
   }
 
   .service > h2 {
-    margin: auto;
+    margin-top: -40px !important;
     font-size: calc(var(--font-lg));
   }
 
   .service h5 {
+    margin-top: calc(var(--gap-xs) - 3.5em);
     font-size: calc(var(--font-small) + 0.1em);
   }
 }
