@@ -191,6 +191,8 @@ nav {
   justify-content: center;
   position: relative;
   flex-direction: column;
+  width: 80%;
+  margin: auto;
 }
 
 .big-heading {
@@ -284,14 +286,18 @@ nav {
 }
 
 .project-image {
-  width: 100%;
   height: 100%;
-  object-fit: contain;
+  width: 100%;
+  object-fit: cover;
   -webkit-filter: grayscale(1) brightness(150%);
   cursor: pointer;
   transition: -webkit-filter 0.5s linear;
-  transform: scale(3);
   background: red;
+  transform: scale(1.2);
+  display: block;
+  margin: auto;
+  text-align: center;
+  transform-origin: center;
 }
 
 .project-image:hover,
@@ -301,26 +307,64 @@ nav {
 }
 
 .project:nth-child(2) .project-image {
-  filter: brightness(250%) grayscale();
-  margin-left: -40px;
-  transform: scale(3.5);
+  filter: brightness(350%) grayscale();
+  transform: scale(1);
 }
 
 .project:nth-child(3) .project-image {
   filter: brightness(100%) grayscale();
-  margin-left: 30px;
-  background: yellow;
 }
 
 .services {
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  margin-top: -4em;
+}
+
+.service > h2:nth-child(2) {
+  margin-top: -20px;
 }
 
 .service {
-  height: 100px;
-  width: 100px;
+  text-align: center;
+  color: var(--color-black);
+  flex-basis: 30%;
+}
+
+.service h2 {
+  font-size: calc(var(--font-regular) + 0.2em);
+  letter-spacing: var(--font-spacing-lg);
+}
+
+.service h5 {
+  color: var(--color-lightgray);
+  font-size: var(--font-sm);
+  font-weight: 300;
+  margin-top: calc(var(--gap-xs) - 2.3em);
+}
+
+.svg-icon [data-color="1"] {
+  fill: #293559;
+}
+.svg-icon [data-color="2"] {
+  fill: #e84a43;
+}
+
+.svg-icon {
+  overflow: visible;
+  display: block;
+  height: 200px;
+  width: 200px;
+  font-size: 0;
+  transform: scale(1);
+  margin: 0 auto;
+  transform: scale(0.8);
+}
+
+#camera-svg {
+  transform: scale(1);
 }
 
 @keyframes opacity-control {
@@ -374,7 +418,6 @@ nav {
     gap: 6em;
   }
   .project {
-    padding: 0 15px;
   }
   .project-number {
     right: 41%;
@@ -398,6 +441,9 @@ nav {
   }
   .dots {
     position: static;
+  }
+  .project:nth-child(2) .project-image {
+    transform: scale(1);
   }
 }
 
