@@ -303,6 +303,7 @@ nav {
 .project:nth-child(2) .project-image {
   filter: brightness(250%) grayscale();
   margin-left: -40px;
+  transform: scale(3.5);
 }
 
 .project:nth-child(3) .project-image {
