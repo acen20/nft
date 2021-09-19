@@ -5,6 +5,8 @@
 :root {
   --avenir-normal: avenir-normal;
   --avenir-bold: avenir-bold;
+  --arial: "arial", sans-serif;
+  --helvetica: "helvetica", sans-serif;
   --avenir-lt-bold: avenir-lt-bold;
   --color-red: rgb(232, 74, 67);
   --color-black: rgb(47, 46, 46);
@@ -12,6 +14,8 @@
   --color-pink: rgb(240, 158, 154);
   --color-blue: midnightblue;
   --color-lightgray: rgb(130, 129, 129);
+  --footer-bg: rgb(41, 53, 89);
+  --color-offwhite: #fffffe;
   --bg-color: rgb(242, 242, 242);
   --color-gray: rgb(95, 104, 131);
   --font-big: 2.725em;
@@ -20,6 +24,7 @@
   --font-small: 1.1em;
   --font-regular: 1em;
   --font-xxl: 4.6em;
+  --font-btn: 1.3em;
   --font-spacing-lg: 0.25em;
   --font-spacing-sm: 0.2em;
   --gap-large: 9em;
@@ -29,6 +34,7 @@
   --line-height-small: 1.5em;
   --line-height-large: 1.85em;
   --translateY: 250px;
+  --desc-width: 50%;
 }
 
 body {
@@ -478,6 +484,7 @@ nav {
 }
 
 .team-container > .desc {
+  width: var(--desc-width);
   text-align: center;
   color: var(--color-lightgray);
   line-height: var(--line-height-small);
@@ -495,7 +502,8 @@ nav {
   grid-template-areas:
     "form-name form-email"
     "form-subject form-subject"
-    "form-message form-message";
+    "form-message form-message"
+    "submit-btn submit-btn";
 }
 
 .contact-form > input:nth-child(1) {
@@ -526,21 +534,75 @@ textarea {
   resize: none;
 }
 
+textarea {
+  height: 150px;
+}
 input:hover,
 textarea:hover {
   border-bottom-width: 4px;
 }
 
 #submit-btn {
-  margin: 0 auto;
   background: var(--color-red);
-  color: white;
+  color: var(--color-offwhite);
   text-transform: capitalize;
-  font-size: var(--font-regular);
+  font-size: var(--font-btn);
+  font-weight: normal;
+  font-family: var(--helvetica);
   border: none;
-  padding: 5px 8px;
+  padding: 0.4em 1.7em;
+  cursor: pointer;
+  width: auto;
+  margin: auto;
+  grid-area: submit-btn;
 }
 
+.footer-container {
+  display: flex;
+  gap: 5em;
+  justify-content: space-around;
+  color: var(--color-offwhite);
+}
+
+footer {
+  background: var(--footer-bg);
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 4em;
+  padding-bottom: 1em;
+}
+
+.footer {
+  font-size: calc(var(--font-big) - 1.4em);
+  color: var(--color-red);
+  font-family: var(--avenir-regular);
+  font-weight: 100;
+  letter-spacing: var(--font-spacing-sm);
+}
+
+footer > .footer-container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: flex-start;
+}
+
+.footer-text {
+  font-family: var(--avenir-regular);
+  font-size: var(--font-sm);
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.footer4 {
+  color: var(--color-gray);
+}
 @keyframes opacity-control {
   0% {
     opacity: 0;
@@ -556,6 +618,7 @@ textarea:hover {
     --font-big: 1.75em;
     --font-xxl: 3.5em;
     --translateY: 0;
+    --desc-width: 90%;
   }
   .hamburger {
     opacity: 1;
@@ -642,14 +705,15 @@ textarea:hover {
     font-size: calc(var(--font-small) + 0.1em);
   }
   .project:nth-child(3) {
-    gmargin-top: calc(var(--translateY) + 200px);
+    margin-top: calc(var(--translateY) + 200px);
   }
   .contact-form {
     grid-template-areas:
       "form-name"
       "form-email"
       "form-subject"
-      "form-message";
+      "form-message"
+      "submit-btn";
   }
 }
 
