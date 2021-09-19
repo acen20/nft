@@ -449,6 +449,40 @@ nav {
   transform: scale(1);
 }
 
+.team-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.8em;
+  padding-top: 20px;
+}
+
+.team-img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: var(--color-red);
+}
+
+.team-container > .name {
+  font-size: calc(var(--font-regular) + 0.5em);
+  letter-spacing: var(--font-spacing-lg);
+}
+
+.team-container > .num-members {
+  font-style: italic;
+  font-weight: 100;
+}
+
+.team-container > .desc {
+  text-align: center;
+  color: var(--color-lightgray);
+  line-height: var(--line-height-small);
+}
+
 @keyframes opacity-control {
   0% {
     opacity: 0;
