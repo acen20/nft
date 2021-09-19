@@ -339,10 +339,15 @@ nav {
 }
 
 .service h5 {
-  color: var(--color-lightgray);
-  font-size: var(--font-sm);
-  font-weight: 300;
-  margin-top: calc(var(--gap-xs) - 2.3em);
+  color: var(--color-black);
+  font-size: calc(var(--font-small) - 0.1em);
+  font-weight: 800;
+  opacity: 0.9;
+  margin-top: calc(var(--gap-xs) - 2.5em);
+  line-height: var(--line-height-small);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .svg-icon [data-color="1"] {
@@ -444,6 +449,26 @@ nav {
   }
   .project:nth-child(2) .project-image {
     transform: scale(1);
+  }
+  .services {
+    flex-direction: column;
+    gap: 0em;
+  }
+
+  .projects-section {
+    width: 90%;
+  }
+  .svg-icon {
+    transform: scale(0.7);
+  }
+
+  .service > h2 {
+    margin: auto;
+    font-size: calc(var(--font-lg));
+  }
+
+  .service h5 {
+    font-size: calc(var(--font-small) + 0.1em);
   }
 }
 
