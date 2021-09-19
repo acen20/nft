@@ -340,7 +340,7 @@ nav {
 }
 
 .project:nth-child(3) {
-  margign-top: calc(var(--translateY) - 200px);
+  margin-top: calc(var(--translateY) - 200px);
 }
 
 .project:nth-child(2) > div {
