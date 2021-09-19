@@ -583,9 +583,8 @@ nav {
     margin-top: calc(var(--gap-xs) - 3.5em);
     font-size: calc(var(--font-small) + 0.1em);
   }
-
   .project:nth-child(3) {
-    flex-basis: 100%;
+    margin-top: calc(var(--translateY) + 200px);
   }
 }
 
