@@ -389,8 +389,7 @@ nav {
   object-fit: cover;
   -webkit-filter: grayscale(1) brightness(150%);
   cursor: pointer;
-  transition: -webkit-filter 0.5s linear;
-  background: red;
+  transition: filter 0.3s ease-out;
   transform: scale(1.2);
 }
 
@@ -405,7 +404,7 @@ nav {
   transform: scale(1);
 }
 
-.project:nth-child(3) .project-image {
+.project:nth-child(3) .projdect-image {
   filter: brightness(100%) grayscale();
   transform: scale(1.2);
   transform-origin: center;
