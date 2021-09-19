@@ -281,7 +281,6 @@ nav {
 .project-img-wrapper {
   overflow: hidden;
   height: 500px;
-  position: relative;
 }
 
 .project-image {
