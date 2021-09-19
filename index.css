@@ -508,15 +508,16 @@ nav {
 
 .contact-form > input:nth-child(4) {
   grid-area: form-message;
-  height: 200px;
+  height: 100px;
 }
 input {
   border: none;
   border-bottom: 1px solid var(--color-black);
   background: transparent;
   border-radius: 0px;
-  font-size: var(--font-lg);
-  padding: 0 8px;
+  font-size: var(--font-sm);
+  font-weight: 100;
+  padding: 10px;
 }
 
 input:hover {
