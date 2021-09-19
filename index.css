@@ -339,16 +339,13 @@ nav {
 
 .projects-container {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
-  gap: 0.1em;
+  justify-content: center;
 }
 
 .project {
   display: flex;
   position: relative;
   flex-direction: column;
-  flex: 1;
   gap: 3em;
 }
 
@@ -410,13 +407,13 @@ nav {
 }
 
 .project-image {
-  height: 100%;
   width: 100%;
+  height: 500px;
   object-fit: cover;
   filter: grayscale(1) brightness(150%);
   cursor: pointer;
   transition: filter 0.3s ease-out;
-  transform: scale(1.2);
+  transfosrm: scale(1.2);
 }
 
 .project-image:hover {
