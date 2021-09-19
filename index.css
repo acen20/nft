@@ -387,19 +387,17 @@ nav {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  -webkit-filter: grayscale(1) brightness(150%);
+  filter: grayscale(1) brightness(150%);
   cursor: pointer;
   transition: filter 0.3s ease-out;
   transform: scale(1.2);
 }
 
-.project-image:hover,
-.project:nth-child(2) .project-image:hover,
-.project:nth-child(3) .project-image:hover {
-  -webkit-filter: none;
+.project-image:hover {
+  filter: none;
 }
 
-.project:nth-child(2) .project-image {
+.project-image {
   filter: contrast(90%) brightness(200%) grayscale();
   transform: scale(1);
 }
