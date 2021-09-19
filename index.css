@@ -303,6 +303,7 @@ nav {
   display: flex;
   position: relative;
   flex-direction: column;
+  flex: 1;
   gap: 3em;
 }
 
