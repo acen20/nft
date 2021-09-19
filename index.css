@@ -470,7 +470,8 @@ nav {
     font-size: calc(var(--font-small) + 0.1em);
   }
 
-  .project:nth-child(3) .project-image {
+  .project:nth-child(3) > * > * > img {
+    box-sizing: border-box;
   }
 }
 
