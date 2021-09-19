@@ -483,6 +483,12 @@ nav {
   line-height: var(--line-height-small);
 }
 
+.contact {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .contact-form {
   display: grid;
   grid-gap: 1em;
@@ -490,8 +496,6 @@ nav {
     "form-name form-email"
     "form-subject form-subject"
     "form-message form-message";
-  width: 90%;
-  margin: 0 auto;
 }
 
 .contact-form > input:nth-child(1) {
@@ -625,7 +629,14 @@ input:hover {
     font-size: calc(var(--font-small) + 0.1em);
   }
   .project:nth-child(3) {
-    Gmargin-top: calc(var(--translateY) + 200px);
+    gmargin-top: calc(var(--translateY) + 200px);
+  }
+  .contact-form {
+    grid-template-areas:
+      "form-name"
+      "form-email"
+      "form-subject"
+      "form-message";
   }
 }
 
