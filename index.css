@@ -547,7 +547,7 @@ nav {
   }
 
   .project:nth-child(3) {
-    flex: 1;
+    flex: 0.5;
   }
 }
 
