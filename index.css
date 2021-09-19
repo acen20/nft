@@ -8,6 +8,8 @@
   --avenir-lt-bold: avenir-lt-bold;
   --color-red: rgb(232, 74, 67);
   --color-black: rgb(47, 46, 46);
+  --color-subheading: rgb(20, 26, 45);
+  --color-blue: midnightblue;
   --color-lightgray: rgb(130, 129, 129);
   --bg-color: rgb(242, 242, 242);
   --color-gray: rgb(95, 104, 131);
@@ -103,13 +105,14 @@ nav {
   padding: 0;
   font-weight: 300;
   font-size: 0.66em;
+  color: var(--color-subheading);
 }
 
 .circle {
   height: 800px;
   width: 800px;
   border-radius: 50%;
-  border: 3px solid rgb(95, 104, 131);
+  border: 3px solid var(--color-blue);
   position: absolute;
   animation: opacity-control;
   animation-duration: 0.9s;
@@ -306,6 +309,17 @@ nav {
 .project:nth-child(3) .project-image {
   filter: brightness(100%) grayscale();
   transform: scale(1.1);
+}
+
+.services {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.service {
+  height: 100px;
+  width: 100px;
 }
 
 @keyframes opacity-control {
