@@ -289,7 +289,7 @@ nav {
   object-fit: cover;
   -webkit-filter: grayscale(1) brightness(150%);
   cursor: pointer;
-  transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s linear;
   transform: scale(1.3);
 }
 
