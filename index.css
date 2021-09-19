@@ -292,7 +292,6 @@ nav {
   cursor: pointer;
   transition: -webkit-filter 0.5s;
   transform: scale(1.3);
-  position: absolute;
 }
 
 .project-image:hover,
