@@ -64,7 +64,7 @@ body {
 .nav-links {
   height: 100vh;
   display: grid;
-  place-items: center;
+  align-items: center;
   background: var(--color-gray);
   color: var(--color-pink);
   font-family: var(--avenir-regular);
@@ -80,6 +80,7 @@ body {
   pointer-events: none;
   transition: opacity 0.5s;
   visibility: hidden;
+  overflow: hidden;
 }
 
 .display {
@@ -93,9 +94,6 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 70%;
-  margin: auto;
-  margin-left: 15px;
 }
 
 .nav-cross {
@@ -113,6 +111,7 @@ body {
 .nav-list > li {
   padding: 0.5em 1em;
   cursor: pointer;
+  width: 70%;
   border-bottom: 1px solid var(--color-pink);
 }
 
@@ -174,7 +173,8 @@ nav {
   transition: all 0.5s;
   gap: 0;
 }
-@keyframes .condense > div:nth-child(n) {
+
+.condense > div:nth-child(n) {
   opacity: 0;
 }
 
@@ -421,12 +421,12 @@ nav {
 
 .project-image {
   filter: contrast(90%) brightness(200%) grayscale();
-  transform: scale(1);
+  transfsorm: scale(1);
 }
 
 .project:nth-child(3) .projdect-image {
   filter: brightness(100%) grayscale();
-  transform: scale(1.2);
+  transforsm: scale(1.2);
   transform-origin: center;
 }
 
