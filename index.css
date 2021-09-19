@@ -79,11 +79,13 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s;
+  visibility: hidden;
 }
 
 .display {
   opacity: 1;
   pointer-events: all;
+  visibility: visible;
 }
 
 .nav-list {
@@ -172,8 +174,7 @@ nav {
   transition: all 0.5s;
   gap: 0;
 }
-
-.condense > div:nth-child(n) {
+@keyframes .condense > div:nth-child(n) {
   opacity: 0;
 }
 
@@ -264,6 +265,31 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 2em;
+}
+
+.stat-container > h1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-container > h1::before {
+  content: "";
+  background: var(--bg-color);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  animation: check 0.6s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  transform: translateX(0%);
+}
+
+@keyframes check {
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .stats-1 {
@@ -664,8 +690,7 @@ footer > .footer-container > div {
     flex-direction: column;
     gap: 4em;
   }
-  .project {
-  }
+
   .project-number {
     right: 41%;
     top: -20px;
@@ -692,6 +717,10 @@ footer > .footer-container > div {
   .project:nth-child(2) .project-image {
     transform: scale(1);
   }
+  .project:nth-child(3) .project-image {
+    transform: scale(1);
+  }
+
   .services {
     flex-direction: column;
     gap: 0em;
@@ -714,9 +743,7 @@ footer > .footer-container > div {
     margin-top: calc(var(--gap-xs) - 3.5em);
     font-size: calc(var(--font-small) + 0.1em);
   }
-  .project:nth-child(3) {
-    margin-top: calc(var(--translateY) + 200px);
-  }
+
   .contact-form {
     grid-template-areas:
       "form-name"
