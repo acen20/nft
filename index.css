@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300&display=swap");
+
 * {
   margin: 0;
 }
@@ -6,6 +8,7 @@
   --avenir-normal: avenir-normal;
   --avenir-bold: avenir-bold;
   --arial: "arial", sans-serif;
+  --exo: "exo";
   --helvetica: "helvetica", sans-serif;
   --avenir-lt-bold: avenir-lt-bold;
   --color-red: rgb(232, 74, 67);
@@ -15,7 +18,7 @@
   --color-blue: midnightblue;
   --color-lightgray: rgb(130, 129, 129);
   --footer-bg: rgb(41, 53, 89);
-  --color-offwhite: #fffffe;
+  --color-offwhite: rgb(255, 255, 254);
   --bg-color: rgb(242, 242, 242);
   --color-gray: rgb(95, 104, 131);
   --font-big: 2.725em;
@@ -577,10 +580,9 @@ footer {
 }
 
 .footer {
-  font-size: calc(var(--font-big) - 1.4em);
+  font-size: calc(var(--font-lg));
   color: var(--color-red);
   font-family: var(--avenir-regular);
-  font-weight: 100;
   letter-spacing: var(--font-spacing-sm);
 }
 
@@ -592,9 +594,9 @@ footer > .footer-container > div {
 }
 
 .footer-text {
-  font-family: var(--avenir-regular);
+  font-family: var(--exo);
   font-size: var(--font-sm);
-  font-weight: 100;
+  font-weight: 300;
   display: flex;
   flex-direction: column;
   gap: 0.4em;
@@ -619,6 +621,7 @@ footer > .footer-container > div {
     --font-xxl: 3.5em;
     --translateY: 0;
     --desc-width: 90%;
+    --font-sm: 1.125em;
   }
   .hamburger {
     opacity: 1;
@@ -714,6 +717,28 @@ footer > .footer-container > div {
       "form-subject"
       "form-message"
       "submit-btn";
+  }
+  footer {
+    padding: 3em 1em;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 2.9em;
+    align-items: center;
+    justify-content: center;
+  }
+  footer > .footer-container > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer {
+    font-size: calc(var(--font-regular) + 0.5em);
+  }
+  .footer-text {
+    align-items: center;
   }
 }
 
