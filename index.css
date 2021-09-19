@@ -323,7 +323,7 @@ nav {
 }
 
 .project:nth-child(3) {
-  margin-top: calc(var(--translateY) - 200px);
+  margign-top: calc(var(--translateY) - 200px);
 }
 
 .project:nth-child(2) > div {
@@ -625,7 +625,7 @@ input:hover {
     font-size: calc(var(--font-small) + 0.1em);
   }
   .project:nth-child(3) {
-    margin-top: calc(var(--translateY) + 200px);
+    Gmargin-top: calc(var(--translateY) + 200px);
   }
 }
 
