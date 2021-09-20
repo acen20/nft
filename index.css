@@ -604,13 +604,14 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 2em;
-  padding: 4em;
+  gap: 1em;
+  padding: 5em;
   padding-bottom: 1em;
+padding-top:3.6em;
 }
 
 .footer {
-  font-size: calc(var(--font-lg) - 0.2em);
+  font-size: calc(var(--font-lg) - 0.4em);
   color: var(--color-red);
   font-family: var(--avenir-regular);
   letter-spacing: var(--font-spacing-sm);
