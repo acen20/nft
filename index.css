@@ -523,7 +523,7 @@ nav {
 }
 
 .contact {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -765,7 +765,7 @@ footer > .footer-container > div {
     justify-content: center;
   }
   .footer {
-    font-size: calc(var(--font-regular) + 0.7em);
+    font-size: calc(var(--font-regular) + 0.2em);
   }
   .footer-text {
     align-items: center;
