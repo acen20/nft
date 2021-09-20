@@ -64,3 +64,13 @@ window.addEventListener("scroll", () => {
     });
   }
 });
+
+window.addEventListener("scroll", () => {
+  var services_container = document.querySelector(".services");
+  var services = document.querySelectorAll(".service h5");
+  if (elementInView(services_container, 400)) {
+    services.forEach((service) => {
+      service.classList.add("translate0");
+    });
+  }
+});
