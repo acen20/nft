@@ -609,7 +609,7 @@ footer {
 }
 
 .footer {
-  font-size: calc(var(--font-lg));
+  font-size: calc(var(--font-lg) - 0.2em);
   color: var(--color-red);
   font-family: var(--avenir-regular);
   letter-spacing: var(--font-spacing-sm);
@@ -748,6 +748,9 @@ footer > .footer-container > div {
       "form-message"
       "submit-btn";
   }
+.contact {
+width: 90%;
+}
   footer {
     padding: 3em 1em;
   }
