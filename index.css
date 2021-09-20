@@ -528,10 +528,6 @@ nav {
   background-color: var(--color-red);
 }
 
-.team-container div:nth-child(n) {
-  transform: ;
-}
-
 .team-container > .name {
   font-size: calc(var(--font-regular) + 0.5em);
   letter-spacing: var(--font-spacing-lg);
