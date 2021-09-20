@@ -65,12 +65,24 @@ window.addEventListener("scroll", () => {
   }
 });
 
+//services
 window.addEventListener("scroll", () => {
   var services_container = document.querySelector(".services");
   var services = document.querySelectorAll(".service h5");
   if (elementInView(services_container, 400)) {
     services.forEach((service) => {
       service.classList.add("translate0");
+    });
+  }
+});
+
+//team
+window.addEventListener("scroll", () => {
+  var team_container = document.querySelector(".team-container");
+  var team_info = document.querySelectorAll(".team-container > *");
+  if (elementInView(team_container, 400)) {
+    team_info.forEach((team) => {
+      team.classList.add("translate0");
     });
   }
 });
