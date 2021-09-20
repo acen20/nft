@@ -132,7 +132,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4.5em 3.3em;
+  padding: 2.5em 3.3em;
   font-family: var(--avenir-normal);
   color: var(--color-red);
   font-size: var(--font-regular);
