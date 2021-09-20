@@ -765,7 +765,7 @@ footer > .footer-container > div {
     justify-content: center;
   }
   .footer {
-    font-size: calc(var(--font-regular) + 0.5em);
+    font-size: calc(var(--font-regular) + 0.7em);
   }
   .footer-text {
     align-items: center;
