@@ -20,3 +20,47 @@ for (var i = 0; i < elem.length; i++) {
     element.style.background = "var(--color-red)";
   });
 }
+
+const elementInView = (el, offset, percentageScroll = 100) => {
+  const elementTop = el.getBoundingClientRect().top;
+  return (
+    elementTop <=
+    (window.innerHeight - offset || document.documentElement.clientHeight) *
+      (percentageScroll / 100)
+  );
+};
+
+//stats-animation
+window.addEventListener("scroll", () => {
+  var stat_container = document.querySelector(".stats-container");
+  var stat_covers = document.querySelectorAll(".stat-cover");
+  if (elementInView(stat_container, 120)) {
+    stat_covers.forEach((stat_cover) => {
+      stat_cover.classList.add("translate100");
+    });
+  }
+});
+
+//title-animation
+window.addEventListener("scroll", () => {
+  var project_titles = document.querySelectorAll(".project-title-container");
+  var title_covers = document.querySelectorAll(".title-cover");
+
+  project_titles.forEach((project_title) => {
+    if (elementInView(project_title, 120)) {
+      let elem = project_title.querySelector(".title-cover");
+      elem.classList.add("translate100");
+    }
+  });
+});
+
+//projects-animation
+window.addEventListener("scroll", () => {
+  var project_container = document.querySelector(".projects-container");
+  var projects = document.querySelectorAll(".project-image");
+  if (elementInView(project_container, 220)) {
+    projects.forEach((project) => {
+      project.classList.add("translate0");
+    });
+  }
+});
