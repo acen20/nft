@@ -282,9 +282,14 @@ font-family: var(--avenir-bold);
   left: 0;
   position: absolute;
   animation: check 0.6s;
+animation-timeline:check;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   transform: translateX(0%);
+}
+
+@scroll-timeline check{
+source: auto
 }
 
 @keyframes check {
