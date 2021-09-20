@@ -814,6 +814,9 @@ footer > .footer-container > div {
   .footer-text {
     align-items: center;
   }
+  .team-container {
+    width: 90%;
+  }
 }
 
 @font-face {
